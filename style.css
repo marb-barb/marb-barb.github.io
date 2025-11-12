@@ -1,0 +1,74 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', 'Gotham', serif;
+    line-height: 1.6;
+    color: #114B5F;
+    background-color:#028090;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* Header styles */
+header {
+    text-align: center; 
+    padding: 2rem 0;
+}
+h1 {
+    background-color: #E4FDE1;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.navigation {
+    text-align: center;
+    background-color: #114B5F;
+    padding: 2.5rem;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.projects {
+    list-style-type: none;
+    padding: 0;
+}
+.projects li {
+    background-color: #d1e5cf;
+    padding: 1rem;
+    border-radius: 30px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.projects li:hover {
+    background-color: #E4FDE1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.projects a {
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+.projects a:hover {
+    color: #028090;
+}
+
+/* unit converter */
+
+.unit-converter {
+    text-align: center;
+    background-color: #E4FDE1;
+    border-radius: 25px;
+    padding: 2rem;
+}
+#convert {
+    font-size: 1.25rem;
+}
+
+/*Hides input arrows*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

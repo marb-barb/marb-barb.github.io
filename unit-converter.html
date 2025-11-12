@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="mar's unit converter" content="about mar's unit converter">
+            <meta name="author" content="marb.barb">
+            <meta name="viewport" content="width=device-width, intial-scale=1.0">
+            <title>mar's unit converter</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <header>
+                <h1>mar's unit converter</h1>
+            </header>
+            <main>
+                <section class="unit-converter">
+                    <select name="conversion-type" id="convert">
+                        <option value="1">Fahrenheit to Celsius</option>
+                        <option value="2">Celsius to Farenheit</option>
+                        <option value="3">Meters to Feet</option>
+                        <option value="4">Feet to Meters</option>
+                    </select>
+                    <br><br>
+                    <label for="inputUnit">Input: </label>
+                    <input id="inputUnit" type="number">
+                    <label for="outputUnit">Output: </label>
+                    <input id="outputUnit" type="number" readonly>
+
+                    <script src="js/converter.js"></script>
+                </section>
+            </main>
+        </body>
+    </html>
