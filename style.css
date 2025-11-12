@@ -50,6 +50,7 @@ h1 {
     font-family: 'Montserrat', 'Gotham', serif;
     font-size: 1.25rem;
     text-decoration: none;
+    color: #114B5F;
 }
 .projects a:hover {
     color: #028090;
