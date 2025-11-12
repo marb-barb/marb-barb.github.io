@@ -11,7 +11,7 @@ body {
     background-color:#028090;
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 50px;
 }
 /* Header styles */
 header {
@@ -21,14 +21,14 @@ header {
 h1 {
     background-color: #E4FDE1;
     padding: 1.5rem;
-    border-radius: 10px;
+    border-radius: 50px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .navigation {
     text-align: center;
     background-color: #114B5F;
-    padding: 2.5rem;
-    border-radius: 25px;
+    padding: 1.25rem;
+    border-radius: 50px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .projects {
