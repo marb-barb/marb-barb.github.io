@@ -13,21 +13,21 @@
                 <h1>mar's unit converter</h1>
             </header>
             <main>
-                <section class="unit-converter">
-                    <select name="conversion-type" id="convert">
+                <div class="unit-converter">
+                    <select name="conversion-type" id="convert" place>
                         <option value="1">Fahrenheit to Celsius</option>
                         <option value="2">Celsius to Farenheit</option>
                         <option value="3">Meters to Feet</option>
                         <option value="4">Feet to Meters</option>
                     </select>
                     <br><br>
-                    <label for="inputUnit">Input: </label>
-                    <input id="inputUnit" type="number">
-                    <label for="outputUnit">Output: </label>
+                    <label for="inputUnit">Input: </label><br>
+                    <input id="inputUnit" type="number"><br>
+                    <label for="outputUnit">Output: </label><br>
                     <input id="outputUnit" type="number" readonly>
 
                     <script src="converter.js"></script>
-                </section>
+                </div>
             </main>
         </body>
     </html>
