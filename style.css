@@ -24,6 +24,16 @@ h1 {
     border-radius: 50px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+#createdBy {
+    background-color: #E4FDE1;
+    position: relative;
+    font-size: 16px;
+    left: 225px;
+    padding: 0.5rem;
+    width: 15rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 .navigation {
     text-align: center;
     background-color: #114B5F;
@@ -59,19 +69,44 @@ h1 {
 /* unit converter */
 
 .unit-converter {
+    position: relative;
+    left: 200px;
+    opacity: 90%;
     text-align: center;
     background-color: #E4FDE1;
-
+    width: 300px;
     border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 2rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.unit-converter:hover {
+    transform: scale(102%);
 }
 #convert {
-    font-size: 1.25rem;
+    color: #114B5F;
+    background-color: #f2fcf1;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 5px;
 }
-
-/*Hides input arrows*/
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+#inputUnit {
+    color: #114B5F;
+    background-color: #f2fcf1;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 5px;
+}
+#back {
+    position: relative;
+    left: 90px;
+    color: #d1e5cf;
+    background-color: #114B5F;
+    width: 50px;
+    font-size: 15px;
+    border-radius: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#back:hover {
+    transform: translateY(-2px);
 }
