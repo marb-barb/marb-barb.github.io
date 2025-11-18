@@ -14,21 +14,23 @@
             </header>
             <main>
                 <div class="unit-converter">
-                    <label for="conversion-type"><strong>unit type</strong></label>
-                    <select name="conversion-type" id="convert" place>
+                    <label for="converts"><strong>unit type</strong></label>
+                    <select name="convert" id="convert" place>
                         <option value="1">Fahrenheit to Celsius</option>
-                        <option value="2">Celsius to Farenheit</option>
+                        <option value="2">Celsius to Fahrenheit</option>
                         <option value="3">Meters to Feet</option>
                         <option value="4">Feet to Meters</option>
                     </select>
-                    <br>
-                    <label for="inputUnit"><strong>Input:</strong></label><br>
+
+                    <br><br>
+                    <label for="inputUnit"><strong>input:</strong></label><br>
                     <input id="inputUnit" type="number"><br>
-                    <label for="outputUnit"><strong>Output:</strong></label><br>
-                    <p id="output"></p><br>
+
+                    <label for="outputUnit"><strong>output:</strong></label><br>
+                    <input id="outputUnit" type="number" readonly><br><br>
                     <a href="./index.html"><h3 id="back">back</h3></a>
 
-                    <script src="converter.js"></script>
+                    <script src="unit-converter.js"></script>
                 </div>
             </main>
         </body>

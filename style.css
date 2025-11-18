@@ -35,7 +35,7 @@ h1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .navigation {
-    text-align: center;
+    margin-inline: auto;
     background-color: #114B5F;
     padding: 1.25rem;
     border-radius: 50px;
@@ -74,7 +74,7 @@ h1 {
     opacity: 90%;
     text-align: center;
     background-color: #E4FDE1;
-    width: 300px;
+    width: 300px;   
     border-radius: 25px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 2rem;
@@ -89,6 +89,10 @@ h1 {
     font-size: 1rem;
     border-radius: 5px;
     padding: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#convert:active {
+    transform: scale(105%);
 }
 #inputUnit {
     color: #114B5F;
@@ -96,10 +100,26 @@ h1 {
     font-size: 12px;
     border-radius: 5px;
     padding: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+#inputUnit:active {
+    transform: scale(105%);
+}
+#outputUnit {
+    color: #114B5F;
+    background-color: #f2fcf1;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#outputUnit:active {
+    transform: scale(105%);
+}
+
 #back {
     position: relative;
-    left: 90px;
+    margin-inline: auto;
     color: #d1e5cf;
     background-color: #114B5F;
     width: 50px;
@@ -109,4 +129,166 @@ h1 {
 }
 #back:hover {
     transform: translateY(-2px);
+}
+#back:active {
+    transform: scale(102%);
+}
+
+/* tax */
+.income-tax-calculator {
+    position: relative;
+    max-width: fit-content;
+    margin-inline: auto;
+    text-align: center;
+    opacity: 90%;
+    background-color: #E4FDE1;
+    width: 900px;   
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.income-tax-calculator:hover {
+    transform: scale(102%);
+}
+.taxTable {
+    background-color: #028090;
+    color: #E4FDE1;
+    border-radius: 1rem;
+    padding: 10px
+}
+table, th, td {
+  border: 1px solid;
+}
+#annualIncome {
+    color: #114B5F;
+    background-color: #f2fcf1;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#annualIncome:active {
+    transform: scale(105%);
+}
+#taxOutput {
+    color: #114B5F;
+    background-color: #f2fcf1;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#taxOutput:active {
+    transform: scale(105%);
+}
+/* sequence calculator */
+.sequence-calculator {
+    position: relative;
+    max-width: fit-content;
+    margin-inline: auto;
+    text-align: center;
+    opacity: 90%;
+    background-color: #E4FDE1;
+    width: 900px;   
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.sequence-calculator:hover {
+    transform: scale(102%);
+}
+#sequenceInput {
+    color: #114B5F;
+    background-color: #f2fcf1;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#sequenceInput:active {
+    transform: scale(105%);
+}
+#compute { 
+    position: relative;
+    margin-inline: auto;
+    color: #d1e5cf;
+    background-color: #114B5F;
+    width: 75px;
+    font-size: 15px;
+    border-radius: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#compute:hover {
+    transform: translateY(-2px);
+}
+
+/* simple pay roll */
+
+h2 {
+    text-align: center;
+}
+.employeeInformation {
+    background-color: #E4FDE1;
+    text-align: left;
+    padding: 1rem;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.employeeInformation:hover {
+    transform: scale(102%);
+}
+#employeeName, #daysWorked, #dailyRate, #deductionAmount, #grossPay, #netPay {
+    background-color: #f2fcf1;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.payrollConfig {
+    display: flex;
+    flex-direction: row;
+    margin-inline: auto;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+#addRow, #deleteRow, #deleteAll, #save, #retrieveSave {
+    color: #d1e5cf;
+    background-color: #114B5F;
+    width: fit-content;
+    height: fit-content;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#addRow:hover, #deleteRow:hover, #deleteAll:hover, #save:hover, #retrieveSave:hover {
+    transform: translateY(-2px);
+}
+#addRow:active, #deleteRow:active, #deleteAll:active, #save:active, #retrieveSave:active {
+    transform: scale(102%); 
+}
+#payrollTable {
+    position: relative;
+    max-width: fit-content;
+    margin-inline: auto;
+    text-align: center;
+    opacity: 90%;
+    background-color: #E4FDE1;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    gap: 4px;
+}
+th, td {
+    padding: 8px;
+
 }
