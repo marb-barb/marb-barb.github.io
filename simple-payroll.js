@@ -7,44 +7,9 @@ function initEventHandler() {
   document.getElementById("daysWorked").addEventListener("change", computeGrossPay);
   document.getElementById("dailyRate").addEventListener("change", computeGrossPay);
   document.getElementById("deductionAmount").addEventListener("change", computeNetPay);
-  document.getElementById("addRow").addEventListener("click", addRow);
-  document.getElementById("deleteRow").addEventListener("click", deleteRowConfirmation);
-  document.getElementById("deleteAll").addEventListener("click", deleteAllConfirmation);
-  document.getElementById("save").addEventListener("click", saveConfirmation);
-  document.getElementById("retrieveSave").addEventListener("click", retrieveConfirmation);
-
-  //Delete Row
-  confirmDeleteRow.addEventListener("click", deleteRow);
-
-  //Delete All
-  confirmDeleteAll.addEventListener("click", deleteAll);
-
-  //Save Table
-  confirmSave.addEventListener("click", save);
-
-  //Load Saved Table
-  confirmRetrieve.addEventListener("click", retrieveSave);
-}
-
-//DIALOG FUNCTIONS
-//Delete Row
-function deleteRowConfirmation() {
-  dlgDeleteRow.showModal();
-}
-
-//Delete All?
-function deleteAllConfirmation() {
-  dlgDeleteAll.showModal();
-}
-
-//Save Table?
-function saveConfirmation() {
-  dlgSaveTable.showModal();
-}
-
-//Load Saved Table?
-function retrieveConfirmation() {
-  dlgRetrieveSave.showModal();
+  document.getElementById("rowAdd").addEventListener("click", addRow);
+  document.getElementById("rowDelete").addEventListener("click", deleteRow);
+  document.getElementById("rowDeleteAll").addEventListener("click", deleteAll);
 }
 
 //OTHER FUNCTIONS (ALPHABETICAL ORDER)
@@ -59,7 +24,7 @@ function addRow() {
   };
   rowInfo.push(employeeInfo);
 
-  document.getElementById("rowDisplay").innerHTML +="<tr>"
+  document.getElementById("payrollDisplay").innerHTML +="<tr>"
   +"<td>"+(rowInfo.length)+"</td>"
   +"<td>"+employeeInfo.employeeName+"</td>"
   +"<td>"+employeeInfo.daysWorked+"</td>"
@@ -97,21 +62,6 @@ function deleteAll() {
   rowInfo = [];
 }
 
-function save() {
-  localStorage.setItem("tableSave", JSON.stringify(rowInfo));
-  if (localStorage.getItem("tableSave")) {
-    alert("Saved to local storage successfully!");
-  }
-  else {
-    alert("Unsuccessful save, please try again.");
-  }
-}
-
-function retrieveSave() {
-  rowInfo = JSON.parse(localStorage.getItem("tableSave"));
-  updateRows();
-}
-
 function round(IN, DP) {
     IN = parseFloat(IN);
     if (!isNaN(IN)) {
@@ -121,11 +71,11 @@ function round(IN, DP) {
 }
 
 function updateRows() {
-  document.getElementById("rowDisplay").innerHTML = "";
+  document.getElementById("payrollDisplay").innerHTML = "";
   let employeeCount = rowInfo.length;
 
   for (let i = 0; i < employeeCount; i++) {
-    document.getElementById("rowDisplay").innerHTML +="<tr>"
+    document.getElementById("payrollDisplay").innerHTML +="<tr>"
     +"<td>"+(i+1)+"</td>"
     +"<td>"+rowInfo[i].employeeName+"</td>"
     +"<td>"+rowInfo[i].daysWorked+"</td>"
@@ -144,24 +94,3 @@ function updateRows() {
   document.getElementById("grossPay").value = null;
   document.getElementById("netPay").value = null;
 }
-
-//MAIN FUNCTION
-let rowInfo = [];
-(()=>
-{
-  //load saved table upon page loading
-  try {
-    const savedData = localStorage.getItem("tableSave");
-    if (savedData) {
-      rowInfo = JSON.parse(savedData);
-      updateRows();
-    }
-  } 
-  catch (error) {
-    console.error("Error loading data from localStorage", error);
-  }
-
-  //initialization
-  initEventHandler();
-
-})();

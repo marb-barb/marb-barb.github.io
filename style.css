@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+  font-family: 'FuturamaFont';
+  src: url('https://github.com/marb-barb/marb-barb.github.io/blob/main/font/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+}
 body {
     font-family: 'Montserrat', 'Gotham', serif;
     line-height: 1.6;
@@ -256,7 +260,7 @@ h2 {
     align-items: center;
     gap: 4px;
 }
-#addRow, #deleteRow, #deleteAll, #save, #retrieveSave {
+#rowAdd, #rowDelete, #rowDeleteAll {
     color: #d1e5cf;
     background-color: #114B5F;
     width: fit-content;
@@ -267,10 +271,10 @@ h2 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-#addRow:hover, #deleteRow:hover, #deleteAll:hover, #save:hover, #retrieveSave:hover {
+#rowAdd:hover, #rowDelete:hover, #rowDeleteAll:hover {
     transform: translateY(-2px);
 }
-#addRow:active, #deleteRow:active, #deleteAll:active, #save:active, #retrieveSave:active {
+#rowAdd:active, #rowDelete:active, #rowDeleteAll:active {
     transform: scale(102%); 
 }
 #payrollTable {
@@ -290,5 +294,13 @@ h2 {
 }
 th, td {
     padding: 8px;
-
+}
+.payrollTable, thead {
+    background-color: #028090;
+    color: #E4FDE1;
+    border-radius: 1rem;
+    padding: 10px
+}
+table, th, td {
+  border: 1px solid;
 }
