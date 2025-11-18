@@ -15,7 +15,7 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 body {
-    font-family: 'Montserrat', 'Gotham', serif;
+    font-family: 'Montserrat', 'Gotham', sans-serif;
     line-height: 1.6;
     color: #114B5F;
     background-color:#028090;
@@ -266,7 +266,7 @@ h2 {
     align-items: center;
     gap: 4px;
 }
-#rowAdd, #rowDelete, #rowDeleteAll {
+#rowAdd, #rowDelete, #clearAll {
     color: #d1e5cf;
     background-color: #114B5F;
     width: fit-content;
@@ -277,10 +277,10 @@ h2 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-#rowAdd:hover, #rowDelete:hover, #rowDeleteAll:hover {
+#rowAdd:hover, #rowDelete:hover, #clearAll:hover {
     transform: translateY(-2px);
 }
-#rowAdd:active, #rowDelete:active, #rowDeleteAll:active {
+#rowAdd:active, #rowDelete:active, #clearAll:active {
     transform: scale(102%); 
 }
 #payrollTable {
@@ -290,16 +290,11 @@ h2 {
     text-align: center;
     opacity: 90%;
     background-color: #E4FDE1;
-    display: flex;
-    flex-direction: row;
     padding: 1rem;
     justify-content: center;
     align-items: center;
     border-radius: 25px;
     gap: 4px;
-}
-th, td {
-    padding: 8px;
 }
 .payrollTable, thead {
     background-color: #028090;
@@ -308,5 +303,5 @@ th, td {
     padding: 10px
 }
 table, th, td {
-  border: 1px solid;
+  padding: 8px
 }

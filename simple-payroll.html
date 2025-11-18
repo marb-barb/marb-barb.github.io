@@ -12,26 +12,28 @@
             <header>
                 <h1>mar's not so simple payroll</h1>
             </header>
+            <main>
+             <div class="employeePayroll">
                 <div class="employeeInformation">
-                    <h2>Employee Information:</h2><br>
+                    <h2>employee information:</h2><br>
                     <div class="employeeInputs">
-                    <label for="employeeName">Employee Name: </label><br>
+                    <label for="employeeName">employee name: </label><br>
                     <input type="text" id="employeeName"><br>
-                    <label for="daysWorked">Days Worked: </label><br>
+                    <label for="daysWorked">days worked: </label><br>
                     <input type="number" id="daysWorked"><br>
-                    <label for="dailyRate">Daily Rate: </label><br>
+                    <label for="dailyRate">daily rate: </label><br>
                     <input type="number" id="dailyRate"><br>
-                    <label for="deductionAmount">Deduction Amount: </label><br>
+                    <label for="deductionAmount">deduction amount: </label><br>
                     <input type="number" id="deductionAmount"><br><br>
                 </div><a href="./index.html"><h3 id="back">back</h3></a></div>        
                 
                 <br>
 
                 <div class="payrollConfig">
-                <button id="rowAdd">add</button>
-                <button id="rowDelete">delete</button>
+                <button onclick="addEmployee()" id="rowAdd">add</button>
+                <button onclick="deleteEmployee()" id="rowDelete">delete</button>
                 <br><br>
-                <button id="rowDeleteAll"><strong>delete all</strong></button>
+                <button onclick="clearFields()" id="clearAll"><strong>clear</strong></button>
                 </div>
                 <table id="payrollTable">
                 <thead>
@@ -44,9 +46,11 @@
                         <th>deduction</th>
                         <th>net pay</th>
                     </tr>
-                </thead>
-                <tbody id="payrollDisplay"></tbody>
-            </table>
+                </thead><br>
+                <tbody></tbody>
+                </table>
+             </div>
+            </main>
             <script src="simple-payroll.js"></script>
         </body>
     </html>
