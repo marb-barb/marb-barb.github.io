@@ -1,4 +1,3 @@
-/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +6,13 @@
 @font-face {
   font-family: 'Montserrat';
   src: url('https://github.com/marb-barb/marb-barb.github.io/blob/main/font/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+  src: url(https://github.com/marb-barb/marb-barb.github.io/blob/main/font/Montserrat-VariableFont_wght.ttf) format('truetype');
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 body {
     font-family: 'Montserrat', 'Gotham', serif;
