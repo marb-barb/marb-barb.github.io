@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 @font-face {
-  font-family: 'FuturamaFont';
+  font-family: 'Montserrat';
   src: url('https://github.com/marb-barb/marb-barb.github.io/blob/main/font/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
 }
 body {
